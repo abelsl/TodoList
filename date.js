@@ -10,9 +10,7 @@ function getDate(){
     day: "numeric"
   };
 
-  let date = todaysDate.toLocaleDateString("en-US",options);
-
-  return date;
+  return todaysDate.toLocaleDateString("en-US",options);
 }
 
 module.exports.getDay = getDay;
@@ -23,7 +21,5 @@ function getDay(){
     weekday: "long"
   };
 
-  let date = todaysDate.toLocaleDateString("en-US",options);
-
-  return date;
+  return todaysDate.toLocaleDateString("en-US",options);
 }
