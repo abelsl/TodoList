@@ -17,7 +17,7 @@ app.get("/", (req, res) =>{
 
 app.post("/", ( req, res) => {
   var item = req.body.inp;
- if(req.body.list === "work" || "Work"){
+ if(req.body.list === "Work" ){
   workList.push(item);
   res.redirect("/work");
  }else{
