@@ -11,8 +11,6 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
-// const items = ["Buy Food", "Cook Food", "Eat Food"];
-// const workItems = [];
 
 mongoose.connect("mongodb://127.0.0.1:27017/todolistDB", {useNewUrlParser : true});
 
@@ -152,6 +150,6 @@ app.get("/about", function( req, res ){
   res.render("about");
 });
 
-app.listen(3000, function() {
+app.listen(300, function() {
   console.log("Server started on port 3000");
 });
