@@ -75,7 +75,13 @@ app.post("/", function(req, res){
   });
 
   if( listName === "Today"){
-    item.save();
+    newItem.save()
+    .then( ( )=>{
+      console.log("Item Saved Successfully!");
+    })
+    .catch( ( err )=>{
+      console.log( err );
+    });
     res.redirect("/");
   } else {
     List.findOne({ name : listName})
@@ -150,6 +156,6 @@ app.get("/about", function( req, res ){
   res.render("about");
 });
 
-app.listen(300, function() {
+app.listen(3000, function() {
   console.log("Server started on port 3000");
 });
