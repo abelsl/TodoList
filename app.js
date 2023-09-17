@@ -122,11 +122,7 @@ app.post("/delete", function (req, res){
       console.log( err );
     });
   }
-
-
 });
-
-
 
 app.get("/:header", function( req, res ) {
   const title = _.capitalize( req.params.header );
